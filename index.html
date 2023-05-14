@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Secret Message App</title>
+</head>
+<body>
+   <div class="container">
+    <div class="container-board">
+        <div class="board">
+            <span>
+                <h3>Type Your Phrase Here</h3>
+            </span>
+            <input type="text" name="text" id="msg">
+            <button class="encode-btn" id="btn">encode</button>
+            <div id="pText"></div>
+        </div>
+    </div>
+    <div class="result-container">
+        <div class="result-a">
+            <div class="normalised" id="normalText"><b><u>Rectangle(normalised Text)</u></b></div>
+        </div>
+        <div class="result-b">
+           <div class="chunk-encoded" id="chunkText"><b><u>Encoded Message</u></b></div> 
+        </div>
+    <div class="result-c">
+        <div class="encoded" id="encodeText"><b><u>RECTANGLE(Encoded Message)</u></b></div>
+    </div>
+   </div>
+   </div>
+</body>
+</html>
