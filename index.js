@@ -24,23 +24,39 @@ encodeBtn.addEventListener("click", function () {
       .join("")
       .toLowerCase();
 
+    //(2) The input is then organised into a rectangle
 
-      //(2) The input is then organised into a rectangle
+    var col = Math.ceil(Math.sqrt(input.length));
+    var row = Math.floor(Math.sqrt(input.length));
+    let firstrec = [];
+    for (let i = 0; i < input.length; i += col) {
+      firstrec.push(input.slice(i, i + col));
+      const recTwoThree = () => {
+        let msg = "";
+        const encoded = firstrec;
+        const arr = [];
 
-      var col = Math.ceil(Math.sqrt(input.length))
-      var row = Math.floor(Math.sqrt(input.length))
-          let firstrec = [];
-          for (let i = 0; i <input.length; i += col){
-            firstrec.push(input.slice(i, i + col))
-                const recTwoThree = () => {
-                    let msg = "";
-                    const encoded = firstrec
-                    const arr = []
-
-                    // return encoded[0][1]
-                    
-                }
-            
+        // return encoded[0][1]
+        for (let a = 0; a < encoded[0].length; a++) {
+          for (let b = 0; b < encoded[0].length; b++) {
+            if (encoded[b][a]) {
+              msg += encoded[b][a];
+            }
           }
+        }
+        for (let c = 0; c < msg.length; c += row) {
+          arr.push(msg.slice(c, c + row));
+        }
+        return arr;
+      };
+      recTwoThree();
+      const normalisedRectangle = () => {
+        let normalisedRectangle = () => {
+          let enc = String(recTwoThree()).replace(/,/g, "")
+          chunk.innerText = enc;
+          return enc;
+        };
+      };
+    }
   };
 });
